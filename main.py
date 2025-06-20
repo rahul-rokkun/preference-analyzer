@@ -2,9 +2,11 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from typing import List
 from google import genai
-
+import os
+from dotenv import load_dotenv
+load_dotenv()
 # Initialize Gemini API
-client = genai.Client(api_key="AIzaSyBAh1prTlOpOwZnxG3djrxtu81jqDvMbis")
+client = genai.Client(api_key=os.getenv("GENAI_API_KEY"))
 app = FastAPI()
 
 # Request model
