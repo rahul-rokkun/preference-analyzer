@@ -2,3 +2,5 @@ google-genai
 # FastAPI and ASGI server
 fastapi
 uvicorn
+
+python-dotenv
